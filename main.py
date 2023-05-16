@@ -1,7 +1,6 @@
 import pygame
 import random
 import PythonBot
-import StartButtons
 
 colours = [
         (0, 0, 0),
@@ -137,14 +136,6 @@ screen = pygame.display.set_mode(size)
 
 pygame.display.set_caption("Tetris")
 
-''' 
-#starting buttons
-bot_image = pygame.image.load('botbutton.png').convert_alpha()
-user_image = pygame.image.load('userbutton.png').convert_alpha()
-
-startBot = StartButtons.Button(100,200,bot_image,0.8)
-startUser = StartButtons.Button(400,200,user_image,0.8)
-'''
 
 # GAME LOOP
 done = False
@@ -154,20 +145,6 @@ game = Tetris(20, 10)
 counter = 0
 pressing_down = False
 
-'''
-    screen.fill((202,228,241))
-    
-    if startBot.draw(screen):
-        game.state == "start"      
-    if startUser.draw(screen):
-        game.state == "start"
-    
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            done = True
-    
-    pygame.display.update()
-'''
 
 while not done:
 
